@@ -1,2 +1,2 @@
-ln -s .zshrc $HOME/.zshrc
-ln -s .zshenv $HOME/.zshenv
+ln -s $(pwd)/.zshrc $HOME/.zshrc
+ln -s $(pwd)/.zshenv $HOME/.zshenv

@@ -7,7 +7,7 @@
 	uc = reset --soft HEAD~1
 	ua = reset
 	rn = branch -m
-        l = log --graph --abbrev-commit --oneline
+  l = log --graph --abbrev-commit --oneline
 [core]
 	editor = vi
 	excludesfile = /Users/jjballano/.gitignore

@@ -1,0 +1,3 @@
+export NVM_DIR=~/.nvm
+
+export STAGING_PLATFORM_DATABASE_PASSWORD=tp64vQyaJiGvru8QHofcRHkxBoE

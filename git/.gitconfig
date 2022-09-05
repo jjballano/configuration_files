@@ -8,8 +8,11 @@
 	ua = reset
 	rn = branch -m
   l = log --graph --abbrev-commit --oneline
+	cp = cherry-pick
 [core]
 	editor = vi
 	excludesfile = /Users/jjballano/.gitignore
 [pull]
 	rebase = true
+[push]
+	autoSetupRemote = true

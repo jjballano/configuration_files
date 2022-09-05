@@ -18,5 +18,6 @@
   "github-actions.org-features": true,
   "notebook.kernelProviderAssociations": [],
   "debug.javascript.usePreview": true,
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDelete": false
 }

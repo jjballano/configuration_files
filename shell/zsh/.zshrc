@@ -104,6 +104,9 @@ alias ll="ls -la"
 alias tailf="tail -f"
 alias inport="sudo lsof -i "
 alias code="/usr/local/bin/code"
+alias kill_node="pkill -f node"
+alias join_dev="eb ssh api-develop-1-ta-1 --profile togetherall --region eu-west-2"
+
 
 #alias killIn9001="sudo kill $(inport :9001 | grep node | awk {'print $2'})"
 #alias killIn9002="sudo kill $(inport :9002 | grep node | awk {'print $2'})"
@@ -131,3 +134,5 @@ function npm { lazy_nvm; npm "$@"; }
 function node { lazy_nvm; node "$@"; }
 function npx { lazy_nvm; npx "$@"; }
 function yarn { lazy_nvm; yarn "$0"; }
+
+export NODE_OPTIONS="--max-old-space-size=6144"

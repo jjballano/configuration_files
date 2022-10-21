@@ -19,5 +19,8 @@
   "notebook.kernelProviderAssociations": [],
   "debug.javascript.usePreview": true,
   "extensions.ignoreRecommendations": false,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "editor.foldingMaximumRegions": 20000,
+  "editor.stickyScroll.enabled": true,
+  "editor.guides.bracketPairs": "active"
 }

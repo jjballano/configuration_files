@@ -103,7 +103,7 @@ alias sudo="sudo " #this allow as to use the other alias with sudo, i.e. sudo ll
 alias ll="ls -la"
 alias tailf="tail -f"
 alias inport="sudo lsof -i "
-alias code="/usr/local/bin/code"
+alias code="/opt/homebrew/bin/code"
 alias kill_node="pkill -f node"
 alias join_dev="eb ssh api-develop-1-ta-1 --profile togetherall --region eu-west-2"
 
@@ -133,6 +133,9 @@ function nvm { lazy_nvm; nvm "$@"; }
 function npm { lazy_nvm; npm "$@"; }
 function node { lazy_nvm; node "$@"; }
 function npx { lazy_nvm; npx "$@"; }
-function yarn { lazy_nvm; yarn "$0"; }
+function yarn { lazy_nvm; yarn "$@"; }
 
 export NODE_OPTIONS="--max-old-space-size=6144"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

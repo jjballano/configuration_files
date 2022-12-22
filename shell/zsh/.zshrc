@@ -105,12 +105,7 @@ alias tailf="tail -f"
 alias inport="sudo lsof -i "
 alias code="/opt/homebrew/bin/code"
 alias kill_node="pkill -f node"
-alias join_dev="eb ssh api-develop-1-ta-1 --profile togetherall --region eu-west-2"
-
-
-#alias killIn9001="sudo kill $(inport :9001 | grep node | awk {'print $2'})"
-#alias killIn9002="sudo kill $(inport :9002 | grep node | awk {'print $2'})"
-#alias killIn9003="sudo kill $(inport :9003 | grep node | awk {'print $2'})"
+alias git_most_changed="git log --format=format: --name-only --since=12.month | egrep -v '^$' | sort | uniq -c | sort -nr | head -50"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -120,6 +115,7 @@ function lazy_nvm {
   unset -f node
   unset -f npx
   unset -f yarn
+  unset -f pnpm
 
   if [ -d "${HOME}/.nvm" ]; then
     export NVM_DIR="$HOME/.nvm"
@@ -134,6 +130,7 @@ function npm { lazy_nvm; npm "$@"; }
 function node { lazy_nvm; node "$@"; }
 function npx { lazy_nvm; npx "$@"; }
 function yarn { lazy_nvm; yarn "$@"; }
+function pnpm { lazy_nvm; pnpm "$@"; }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
